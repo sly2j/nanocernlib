@@ -1,0 +1,14 @@
+# - Config file for the miniCernlib package
+# It defines the following variables
+#  MINICERNLIB_LIBRARIES    - libraries to link against
+ 
+# Compute paths
+get_filename_component(MINICERNLIB_CMAKE_DIR "${CMAKE_CURRENT_LIST_FILE}" PATH)
+ 
+# Our library dependencies (contains definitions for IMPORTED targets)
+if(NOT TARGET miniCernlib_packlib AND NOT miniCernlib_BINARY_DIR)
+  include("${MINICERNLIB_CMAKE_DIR}/miniCernlibTargets.cmake")
+endif()
+ 
+# These are IMPORTED targets created by bosIOTargets.cmake
+set(MINICERNLIB_LIBRARIES miniCernlib_packlib)
