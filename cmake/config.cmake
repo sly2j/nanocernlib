@@ -1,9 +1,12 @@
 ################################################################################
 ## CMAKE Settings 
 ################################################################################
-## make sure that the default build is RELEASE
-set (CMAKE_BUILD_TYPE RELEASE CACHE STRING
-    "Choose the type of build, options are: None Debug Release.")
+## make sure that the default is RELEASE
+if (NOT CMAKE_BUILD_TYPE)
+  set (CMAKE_BUILD_TYPE RELEASE CACHE STRING
+      "Choose the type of build, options are: None Debug Release."
+      FORCE)
+endif ()
 ## Offer the user the choice of overriding the installation directories
 set(INSTALL_LIB_DIR lib CACHE PATH "Installation directory for libraries")
 set(INSTALL_BIN_DIR bin CACHE PATH "Installation directory for executables")
@@ -24,7 +27,3 @@ foreach(p LIB BIN INCLUDE CMAKE)
     set(${var} "${CMAKE_INSTALL_PREFIX}/${${var}}")
   endif()
 endforeach()
-
-## extra cmake modules if needed
-#set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} 
-#    "${CMAKE_SOURCE_DIR}/cmake/Modules/")
