@@ -18,19 +18,16 @@ set (MINICERNLIB_SOVERSION ${MINICERNLIB_MAJOR_VERSION})
 include(cmake/config.cmake)
 include(cmake/compiler.cmake)
 
-## cernlib defines
-add_definitions(
-  "-DCERNLIB_LINUX"
-  "-DCERNLIB_UNIX"
-  "-DCERNLIB_LNX"
-  "-DCERNLIB_QMGLIBC"
-  "-DCERNLIB_GFORTRAN")
-
 ## Add subdirectories
 add_subdirectory(geant321)
 add_subdirectory(packlib)
 add_subdirectory(mathlib)
 
+################################################################################
+## NOTE: everything below this point creates and installs cmake configuration
+##       files so the project works seamlessly with the find_package() function
+##       when included from another project.
+################################################################################
 ################################################################################
 ## Prepare the project to be EXPORTed, generate configuration files
 ################################################################################
