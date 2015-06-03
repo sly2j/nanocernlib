@@ -1,7 +1,7 @@
 ################################################################################
 ## CMAKE Settings
 ################################################################################
-include_directories("epio" "ffread" "hbook" "zebra")
+include_directories("cspack" "epio" "ffread" "hbook" "zebra")
 include_directories("kernlib/kernbit")
 include_directories("kernlib/kernnum")
 include_directories("kernlib/kerngen")
@@ -10,6 +10,7 @@ include_directories(${PROJECT_SOURCE_DIR})
 ################################################################################
 ## Sources and install headers
 ################################################################################
+include ("cmake/cspack.cmake")
 include ("cmake/epio.cmake")
 include ("cmake/ffread.cmake")
 include ("cmake/hbook.cmake")
