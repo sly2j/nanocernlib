@@ -157,6 +157,16 @@ zebra/mqs/mzsdiv.F
 zebra/mqs/mzxref.F
 zebra/mqs/mzxrpr.F
 zebra/mqs/mzxrup.F
+zebra/mqv/zvauto.F
+zebra/mqv/zvautu.F
+zebra/mqv/zvautx.F
+zebra/mqv/zvauty.F
+zebra/mqv/zvdo1.F
+zebra/mqv/zvdo2.F
+zebra/mqv/zvdobk.F
+zebra/mqv/zvdola.F
+zebra/mqv/zverif.F
+zebra/mqv/zvfpri.F
 zebra/qend/zabend.F
 zebra/qend/zend.F
 zebra/qend/zfatal.F
