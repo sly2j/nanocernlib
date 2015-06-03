@@ -1,12 +1,47 @@
+*
+* $Id: izbcdt.F,v 1.4 1999/06/18 13:31:19 couet Exp $
+*
+* $Log: izbcdt.F,v $
+* Revision 1.4  1999/06/18 13:31:19  couet
+* - qcardl.inc was empty: It is now removed and not used.
+*   Comment END CDE removed.
+*
+* Revision 1.3  1998/09/25 09:33:21  mclareni
+* Modifications for the Mklinux port flagged by CERNLIB_PPC
+*
+* Revision 1.2  1996/09/23 12:20:34  cernlib
+* add Linux
+*
+* Revision 1.1.1.1  1996/03/06 10:47:14  mclareni
+* Zebra
+*
+*
+#include "zebra/pilot.h"
+#if defined(CERNLIB_Z32)
+#include "qutyz32/izbcdt.F"
+#elif (defined(CERNLIB_VAXVMS))||(defined(CERNLIB_QMVMI)) \
+    ||(defined(CERNLIB_QMDOS))||(defined(CERNLIB_TMO)) \
+    ||((defined(CERNLIB_QMLNX) && !defined(CERNLIB_PPC)))
+#include "qutyinv/izbcdt.F"
+#elif (defined(CERNLIB_CONVEX))&&(defined(CERNLIB_SINGLE))
+#include "not_cern/qutycvx/izbcdt.F"
+#elif defined(CERNLIB_CRAY)
+#include "not_cern/qutycry/izbcdt.F"
+#elif defined(CERNLIB_CDC)
+#include "not_cern/qutycdc/izbcdt.F"
+#elif defined(CERNLIB_PDP)
+#include "not_cern/qutypdp/izbcdt.F"
+#else
       SUBROUTINE IZBCDT (NP,ITABT)
 
+C-    This is a very slow stop-gap solution only  !!!
+
 #include "zebra/quest.inc"
-#include "zebra/zceta.inc"
 #include "zebra/zkrakc.inc"
-C--------------    END CDE                             --------------
+#include "zebra/zbcd.inc"
+*
       DIMENSION    NP(9), ITABT(99)
 
-#include "zebra/q_and.inc"
 
       N     = NP(1)
       LIM   = ITABT(1)
@@ -14,10 +49,9 @@ C--------------    END CDE                             --------------
       JBAD  = 0
 
       DO 29  JWH=1,N
-      JV = IAND (IQHOLK(JWH),255)
-      JV = IQTCET(JV+1)
+      JV = IUCOMP (IQHOLK(JWH),IQLETT(1),LIM)
 
-      IF (JV.GT.LIM)               GO TO 27
+      IF (JV.EQ.0)                 GO TO 27
       JV = ITABT(JV+1)
       IF   (JV+1)            29, 27, 24
    24 JGOOD = JGOOD + 1
@@ -30,3 +64,4 @@ C--------------    END CDE                             --------------
       IQUEST(2) = JBAD
       RETURN
       END
+#endif

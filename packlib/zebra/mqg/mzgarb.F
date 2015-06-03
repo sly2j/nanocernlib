@@ -73,6 +73,7 @@ C--                Construct Memory Occupation table
       IF (NQLOGL.LT.2)             GO TO 24
    22 WRITE (IQLOG,9022) JQSTOR,MQDVGA,MQDVWI
  9022 FORMAT (' MZGARB-  User Garb.C./Wipe for store',I3,', Divs',
+#endif
 #if !defined(CERNLIB_HEX)
      F2(2X,O8))
 #endif
@@ -82,7 +83,6 @@ C--                Construct Memory Occupation table
 #if defined(CERNLIB_QDEBUG)
       IQVREM(1,JVLEV) = IQVID(1)
       IQVREM(2,JVLEV) = IQVID(2)
-#endif
 #endif
    24 CALL MZTABM
 

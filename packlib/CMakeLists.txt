@@ -21,6 +21,7 @@ include ("cmake/zebra.cmake")
 ## Compile and Link
 ################################################################################
 add_library(miniCernlib_packlib STATIC 
+  ${CSPACK_SOURCES}
   ${EPIO_SOURCES}
   ${FFREAD_SOURCES}
   ${HBOOK_SOURCES}
