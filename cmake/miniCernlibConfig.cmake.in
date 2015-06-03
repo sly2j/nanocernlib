@@ -6,9 +6,14 @@
 get_filename_component(MINICERNLIB_CMAKE_DIR "${CMAKE_CURRENT_LIST_FILE}" PATH)
  
 # Our library dependencies (contains definitions for IMPORTED targets)
-if(NOT TARGET miniCernlib_packlib AND NOT miniCernlib_BINARY_DIR)
+if(NOT TARGET miniCernlib_packlib AND NOT TARGET miniCernlib_mathlib 
+  AND NOT TARGET miniCernlib_geant321
+  AND NOT miniCernlib_BINARY_DIR)
   include("${MINICERNLIB_CMAKE_DIR}/miniCernlibTargets.cmake")
 endif()
  
 # These are IMPORTED targets created by bosIOTargets.cmake
-set(MINICERNLIB_LIBRARIES miniCernlib_packlib)
+set(MINICERNLIB_LIBRARIES 
+  miniCernlib_packlib 
+  miniCernlib_mathlib
+  miniCernlib_geant321)

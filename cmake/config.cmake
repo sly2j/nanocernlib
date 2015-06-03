@@ -3,8 +3,8 @@
 ################################################################################
 ## make sure that the default is RELEASE
 if (NOT CMAKE_BUILD_TYPE)
-  set (CMAKE_BUILD_TYPE RELEASE CACHE STRING
-      "Choose the type of build, options are: None Debug Release."
+  set (CMAKE_BUILD_TYPE RelWithDebInfo CACHE STRING
+      "Choose the type of build, options are: None Debug Release RelWithDebInfo."
       FORCE)
 endif ()
 ## Offer the user the choice of overriding the installation directories

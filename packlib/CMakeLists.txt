@@ -1,20 +1,30 @@
 ################################################################################
 ## CMAKE Settings
 ################################################################################
-include_directories("epio" "kerngen")
+include_directories("epio" "ffread" "hbook" "zebra")
+include_directories("kernlib/kernbit")
+include_directories("kernlib/kernnum")
+include_directories("kernlib/kerngen")
+include_directories(${PROJECT_SOURCE_DIR})
 
 ################################################################################
 ## Sources and install headers
 ################################################################################
-file (GLOB SOURCES "epio/*.F"
-                   "kerngen/*.c"
-                   "kerngen/*.F")
-#file (GLOB HEADERS "*.h" "*.inc")
+include ("cmake/epio.cmake")
+include ("cmake/ffread.cmake")
+include ("cmake/hbook.cmake")
+include ("cmake/kernlib.cmake")
+include ("cmake/zebra.cmake")
 
 ################################################################################
 ## Compile and Link
 ################################################################################
-add_library(miniCernlib_packlib STATIC ${SOURCES})
+add_library(miniCernlib_packlib STATIC 
+  ${EPIO_SOURCES}
+  ${FFREAD_SOURCES}
+  ${HBOOK_SOURCES}
+  ${KERNLIB_SOURCES}
+  ${ZEBRA_SOURCES})
 set_target_properties(miniCernlib_packlib PROPERTIES 
   VERSION ${MINICERNLIB_VERSION} 
   SOVERSION ${MINICERNLIB_SOVERSION})

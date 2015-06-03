@@ -16,23 +16,26 @@ set (MINICERNLIB_SOVERSION ${MINICERNLIB_MAJOR_VERSION})
 ## CMAKE Settings 
 ################################################################################
 include(cmake/config.cmake)
-include(cmake/fortran.cmake)
+include(cmake/compiler.cmake)
 
-include_directories("${PROJECT_SOURCE_DIR}/packlib")
-
-## Treat building on OSX as building on Linux
-if (${CMAKE_SYSTEM_NAME} MATCHES "Darwin")
-  add_definitions("-DCERNLIB_LINUX")
-endif ()
+## cernlib defines
+add_definitions(
+  "-DCERNLIB_LINUX"
+  "-DCERNLIB_UNIX"
+  "-DCERNLIB_LNX"
+  "-DCERNLIB_QMGLIBC"
+  "-DCERNLIB_GFORTRAN")
 
 ## Add subdirectories
+add_subdirectory(geant321)
 add_subdirectory(packlib)
+add_subdirectory(mathlib)
 
 ################################################################################
 ## Prepare the project to be EXPORTed, generate configuration files
 ################################################################################
 ## Add all targets to the build-tree export set
-export(TARGETS miniCernlib_packlib
+export(TARGETS miniCernlib_packlib miniCernlib_mathlib miniCernlib_geant321
   FILE "${PROJECT_BINARY_DIR}/miniCernlibTargets.cmake")
 
 ## Export the package for use from the build-tree
@@ -64,3 +67,5 @@ install(FILES
 ## Install the export set for use with the install tree
 install(EXPORT miniCernlibTargets DESTINATION 
   "${INSTALL_CMAKE_DIR}" COMPONENT dev)
+
+  #include(cmake/debug_print.cmake)

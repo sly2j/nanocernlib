@@ -1,0 +1,15 @@
+SET(FFREAD_SOURCES 
+ffread/sffread/ffcard.F
+ffread/sffread/fffind.F
+ffread/sffread/ffget.F
+ffread/sffread/ffgo.F
+ffread/sffread/ffinit.F
+ffread/sffread/ffkey.F
+ffread/sffread/ffread.F
+ffread/sffread/ffrset.F
+ffread/sffread/ffset.F
+ffread/sffread/ffskip.F
+ffread/sffread/ffupca.F
+ffread/sffread/ffuser.F
+ffread/sffread/ffuset.F
+)
