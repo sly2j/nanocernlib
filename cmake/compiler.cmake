@@ -27,7 +27,7 @@ get_filename_component(C_COMPILER_NAME ${CMAKE_C_COMPILER} NAME)
 if (C_COMPILER_NAME MATCHES "cc.*" OR 
     C_COMPILER_NAME MATCHES "gcc.*" OR 
     C_COMPILER_NAME MATCHES "clang.*")
-  set (CC_EXTRA_FLAGS "-funroll-loops -fomit-frame-pointer -ftree-vectorize -fno-second-underscore")
+  set (CC_EXTRA_FLAGS "-funroll-loops -fomit-frame-pointer -ftree-vectorize")
   set (CMAKE_C_FLAGS "${CMAKE_C_FLAGS} ${CC_EXTRA_FLAGS}")
   set (CMAKE_C_FLAGS_RELEASE "${CMAKE_C_FLAGS_RELEASE} ${CC_EXTRA_FLAGS}")
   set (CMAKE_C_FLAGS_DEBUG   "${CMAKE_C_FLAGS_DEBUG} ${CC_EXTRA_FLAGS}")
