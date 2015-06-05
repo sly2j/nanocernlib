@@ -1,7 +1,7 @@
 ################################################################################
 ## CMAKE Settings
 ################################################################################
-set (LIBRARY "miniCernlib_mathlib")
+set (LIBRARY "minicernlib_mathlib")
 set (TARGETS ${TARGETS} ${LIBRARY} PARENT_SCOPE)
 
 ################################################################################
@@ -26,7 +26,7 @@ set_target_properties(${LIBRARY} PROPERTIES
 ## Export and Install
 ################################################################################
 install(TARGETS ${LIBRARY}
-  EXPORT "${PROJECT_NAME}Targets"
+  EXPORT "${PROJECT_NAME}-targets"
   RUNTIME DESTINATION "${INSTALL_BIN_DIR}" COMPONENT bin
   LIBRARY DESTINATION "${INSTALL_LIB_DIR}" COMPONENT lib
   ARCHIVE DESTINATION "${INSTALL_LIB_DIR}" COMPONENT lib)

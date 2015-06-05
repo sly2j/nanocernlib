@@ -1,7 +1,7 @@
 ################################################################################
 ## CMAKE Settings
 ################################################################################
-set (LIBRARY "miniCernlib_packlib")
+set (LIBRARY "minicernlib_packlib")
 set (TARGETS ${TARGETS} ${LIBRARY} PARENT_SCOPE)
 
 ################################################################################
@@ -41,7 +41,7 @@ include_directories("kernlib/kerngen")
 ## Export and Install
 ################################################################################
 install(TARGETS ${LIBRARY}
-  EXPORT "${PROJECT_NAME}Targets"
+  EXPORT "${PROJECT_NAME}-targets"
   RUNTIME DESTINATION "${INSTALL_BIN_DIR}" COMPONENT bin
   LIBRARY DESTINATION "${INSTALL_LIB_DIR}" COMPONENT lib
   ARCHIVE DESTINATION "${INSTALL_LIB_DIR}" COMPONENT lib)

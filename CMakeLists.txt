@@ -1,10 +1,10 @@
-## CMake project file for miniCernlib
+## CMake project file for minicernlib
 
 ################################################################################
-## PROJECT: miniCernlib
+## PROJECT: minicernlib
 ################################################################################
 cmake_minimum_required (VERSION 2.8)
-project (miniCernlib)
+project (minicernlib)
 set (MINICERNLIB_MAJOR_VERSION 1)
 set (MINICERNLIB_MINOR_VERSION 0)
 set (MINICERNLIB_PATCH_VERSION 0)
@@ -30,4 +30,4 @@ add_subdirectory(cfortran)
 ################################################################################
 ## Prepare the project to be EXPORTed, generate configuration files
 ################################################################################
-include("cmake/export.cmake")
+include(cmake/export.cmake)

@@ -1,4 +1,4 @@
-# - Config file for the miniCernlib package
+# - Config file for the minicernlib package
 # It defines the following variables
 # MINICERNLIB_LIBRARIES     - libraries to link against
 # MINICERNLIB_*_LIBRARY     - single cernlib libraries (e.g.
@@ -10,21 +10,21 @@
 get_filename_component(MINICERNLIB_CMAKE_DIR "${CMAKE_CURRENT_LIST_FILE}" PATH)
  
 # Our library dependencies (contains definitions for IMPORTED targets)
-if (NOT TARGET miniCernlib_packlib AND 
-    NOT TARGET miniCernlib_mathlib AND 
-    NOT TARGET miniCernlib_geant321 AND 
-    NOT miniCernlib_BINARY_DIR)
-  include("${MINICERNLIB_CMAKE_DIR}/miniCernlibTargets.cmake")
+if (NOT TARGET minicernlib_packlib AND 
+    NOT TARGET minicernlib_mathlib AND 
+    NOT TARGET minicernlib_geant321 AND 
+    NOT minicernlib_BINARY_DIR)
+  include("${MINICERNLIB_CMAKE_DIR}/minicernlibTargets.cmake")
 endif()
 
 # These are IMPORTED targets created by bosIOTargets.cmake
 set(MINICERNLIB_LIBRARIES
-  miniCernlib_packlib
-  miniCernlib_mathlib
-  miniCernlib_geant321)
+  minicernlib_packlib
+  minicernlib_mathlib
+  minicernlib_geant321)
 
 ## packlib 
-set(MINICERNLIB_packlib_LIBRARY miniCernlib_packlib)
+set(MINICERNLIB_packlib_LIBRARY minicernlib_packlib)
 ## packlib sub-libraries
 set(MINICERNLIB_packlib_INCLUDE_DIR "@CONF_INCLUDE_DIRS@/packlib")
 set(MINICERNLIB_cspack_INCLUDE_DIR "@CONF_INCLUDE_DIRS@/packlib/cspack")
@@ -38,10 +38,10 @@ set(MINICERNLIB_kernbit_INCLUDE_DIR "@CONF_INCLUDE_DIRS@/packlib/kernlib/kernbit
 set(MINICERNLIB_kernnum_INCLUDE_DIR "@CONF_INCLUDE_DIRS@/packlib/kernlib/kernnum")
 set(MINICERNLIB_kerngen_INCLUDE_DIR "@CONF_INCLUDE_DIRS@/packlib/kernlib/kerngen")
 ## mathlib includes
-set(MINICERNLIB_mathlib_LIBRARY miniCernlib_mathlib)
+set(MINICERNLIB_mathlib_LIBRARY minicernlib_mathlib)
 set(MINICERNLIB_gen_INCLUDE_DIR "@CONF_INCLUDE_DIRS@/mathlib/gen")
 ## geant321 includes
-set(MINICERNLIB_geant321_LIBRARY miniCernlib_geant321)
+set(MINICERNLIB_geant321_LIBRARY minicernlib_geant321)
 set(MINICERNLIB_geant321_INCLUDE_DIR "@CONF_INCLUDE_DIRS@/geant321")
 ## cfortran includes
 set(MINICERNLIB_cfortran_INCLUDE_DIR "@CONF_INCLUDE_DIRS@/cfortran")
