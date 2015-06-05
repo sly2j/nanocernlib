@@ -20,7 +20,7 @@ configure_file("cmake/${PROJECT_NAME}-config.cmake.in"
   "${PROJECT_BINARY_DIR}/${PROJECT_NAME}-config.cmake" @ONLY)
 ## ... project-config.cmake for the install-tree
 set(CONF_INCLUDE_DIRS
-  "\${${PROJECT_NAME_CAPS}}/${REL_INCLUDE_DIR}")
+  "\${${PROJECT_NAME_CAPS}_CMAKE_DIR}/${REL_INCLUDE_DIR}")
 configure_file("cmake/${PROJECT_NAME}-config.cmake.in"
   "${PROJECT_BINARY_DIR}${CMAKE_FILES_DIRECTORY}/${PROJECT_NAME}-config.cmake"
   @ONLY)

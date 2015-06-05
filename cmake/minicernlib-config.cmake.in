@@ -14,10 +14,10 @@ if (NOT TARGET minicernlib_packlib AND
     NOT TARGET minicernlib_mathlib AND 
     NOT TARGET minicernlib_geant321 AND 
     NOT minicernlib_BINARY_DIR)
-  include("${MINICERNLIB_CMAKE_DIR}/minicernlibTargets.cmake")
+  include("${MINICERNLIB_CMAKE_DIR}/minicernlib-targets.cmake")
 endif()
 
-# These are IMPORTED targets created by bosIOTargets.cmake
+# These are IMPORTED targets created by bosIO-targets.cmake
 set(MINICERNLIB_LIBRARIES
   minicernlib_packlib
   minicernlib_mathlib
