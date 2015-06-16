@@ -2,7 +2,17 @@
 ## Prepare the project to be EXPORTed, generate cmake configuration files
 ################################################################################
 
+## utility string of project name in all caps
 string(TOUPPER ${PROJECT_NAME} PROJECT_NAME_CAPS)
+
+## lets get all the global defines associated with the project
+get_directory_property(CONF_DEFINITIONS_RAW
+  DIRECTORY ${PROJECT_SOURCE_DIR} 
+  COMPILE_DEFINITIONS)
+foreach(define ${CONF_DEFINITIONS_RAW})
+  set(CONF_DEFINITIONS ${CONF_DEFINITIONS} "-D${define}")
+endforeach ()
+
 ## Add all targets to the build-tree export set
 export(TARGETS ${TARGETS} 
   FILE "${PROJECT_BINARY_DIR}/${PROJECT_NAME}-targets.cmake")

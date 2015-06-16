@@ -13,7 +13,7 @@ endif ()
 
 ## OSX specific
 if (${CMAKE_SYSTEM_NAME} MATCHES "Darwin")
-  add_definitions("-DMACOSX" "-DLinux")
+  add_definitions("-DCERNLIB_MACOSX" "-DLinux")
 endif ()
 
 ################################################################################

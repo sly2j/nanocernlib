@@ -1,13 +1,23 @@
 # - Config file for the minicernlib package
 # It defines the following variables
 # MINICERNLIB_LIBRARIES     - libraries to link against
+# MINICERNLIB_INCLUDE_DIR   - project include directory
+# MINICERNLIB_DEFINITIONS       - cernlib defines needed to compile with cernlib
+#                             headers
 # MINICERNLIB_*_LIBRARY     - single cernlib libraries (e.g.
 #                             MINICERNLIB_GEANT321_LIBRARY)
 # MINICERNLIB_*_INCLUDE_DIR - project component include dir (e.g.
 #                             MINICERNLIB_kernlib_INCLUDE_DIR)
+
+# enable languages
+enable_language(Fortran C)
  
 # Compute paths
 get_filename_component(MINICERNLIB_CMAKE_DIR "${CMAKE_CURRENT_LIST_FILE}" PATH)
+set(MINICERNLIB_INCLUDE_DIR "@CONF_INCLUDE_DIRS@")
+
+# Cernlib defines
+set(MINICERNLIB_DEFINITIONS "@CONF_DEFINITIONS@;-DCERNLIB_TYPE")
  
 # Our library dependencies (contains definitions for IMPORTED targets)
 if (NOT TARGET minicernlib_packlib AND 
@@ -24,7 +34,7 @@ set(MINICERNLIB_LIBRARIES
   minicernlib_geant321)
 
 ## packlib 
-set(MINICERNLIB_packlib_LIBRARY minicernlib_packlib)
+set(MINICERNLIB_packlib_LIBRARY "@CONF_INCLUDE_DIRS@/minicernlib_packlib")
 ## packlib sub-libraries
 set(MINICERNLIB_packlib_INCLUDE_DIR "@CONF_INCLUDE_DIRS@/packlib")
 set(MINICERNLIB_cspack_INCLUDE_DIR "@CONF_INCLUDE_DIRS@/packlib/cspack")
