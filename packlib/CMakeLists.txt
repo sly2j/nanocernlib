@@ -1,7 +1,7 @@
 ################################################################################
 ## CMAKE Settings
 ################################################################################
-set (LIBRARY "minicernlib_packlib")
+set (LIBRARY "nanocernlib_packlib")
 set (TARGETS ${TARGETS} ${LIBRARY} PARENT_SCOPE)
 
 ################################################################################
@@ -25,8 +25,8 @@ add_library(${LIBRARY} STATIC
   ${KERNLIB_SOURCES}
   ${ZEBRA_SOURCES})
 set_target_properties(${LIBRARY} PROPERTIES 
-  VERSION ${MINICERNLIB_VERSION} 
-  SOVERSION ${MINICERNLIB_SOVERSION})
+  VERSION ${NANOCERNLIB_VERSION} 
+  SOVERSION ${NANOCERNLIB_SOVERSION})
 
 ################################################################################
 ## Include directories

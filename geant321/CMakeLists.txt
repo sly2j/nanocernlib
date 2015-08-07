@@ -1,7 +1,7 @@
 ################################################################################
 ## CMAKE Settings
 ################################################################################
-set (LIBRARY "minicernlib_geant321")
+set (LIBRARY "nanocernlib_geant321")
 set (TARGETS ${TARGETS} ${LIBRARY} PARENT_SCOPE)
 
 ################################################################################
@@ -19,8 +19,8 @@ include_directories(${CMAKE_CURRENT_SOURCE_DIR})
 ################################################################################
 add_library(${LIBRARY} STATIC ${SOURCES})
 set_target_properties(${LIBRARY} PROPERTIES 
-  VERSION ${MINICERNLIB_VERSION} 
-  SOVERSION ${MINICERNLIB_SOVERSION})
+  VERSION ${NANOCERNLIB_VERSION} 
+  SOVERSION ${NANOCERNLIB_SOVERSION})
 
 ################################################################################
 ## Export and Install

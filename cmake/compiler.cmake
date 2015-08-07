@@ -6,7 +6,8 @@ if (${UNIX})
     "-DCERNLIB_LINUX"
     "-DCERNLIB_UNIX"
     "-DCERNLIB_LNX"
-    "-DCERNLIB_QMGLIBC")
+    "-DCERNLIB_QMGLIBC"
+    "-DLinux")
 else ()
   message( FATAL_ERROR "Unable to build on non-Unix system, aborting..." )
 endif ()

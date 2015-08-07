@@ -1,16 +1,16 @@
-## CMake project file for minicernlib
+## CMake project file for nanocernlib
 
 ################################################################################
-## PROJECT: minicernlib
+## PROJECT: nanocernlib
 ################################################################################
 cmake_minimum_required (VERSION 2.8)
-project (minicernlib)
-set (MINICERNLIB_MAJOR_VERSION 1)
-set (MINICERNLIB_MINOR_VERSION 0)
-set (MINICERNLIB_PATCH_VERSION 0)
-set (MINICERNLIB_VERSION 
-  ${MINICERNLIB_MAJOR_VERSION}.${MINICERNLIB_MINOR_VERSION}.${MINICERNLIB_PATCH_VERSION})
-set (MINICERNLIB_SOVERSION ${MINICERNLIB_MAJOR_VERSION})
+project (nanocernlib)
+set (NANOCERNLIB_MAJOR_VERSION 1)
+set (NANOCERNLIB_MINOR_VERSION 0)
+set (NANOCERNLIB_PATCH_VERSION 0)
+set (NANOCERNLIB_VERSION 
+  ${NANOCERNLIB_MAJOR_VERSION}.${NANOCERNLIB_MINOR_VERSION}.${NANOCERNLIB_PATCH_VERSION})
+set (NANOCERNLIB_SOVERSION ${NANOCERNLIB_MAJOR_VERSION})
 
 ################################################################################
 ## CMAKE Settings 

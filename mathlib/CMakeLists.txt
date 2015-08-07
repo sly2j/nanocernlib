@@ -1,7 +1,7 @@
 ################################################################################
 ## CMAKE Settings
 ################################################################################
-set (LIBRARY "minicernlib_mathlib")
+set (LIBRARY "nanocernlib_mathlib")
 set (TARGETS ${TARGETS} ${LIBRARY} PARENT_SCOPE)
 
 ################################################################################
@@ -19,8 +19,8 @@ include_directories("gen")
 ################################################################################
 add_library(${LIBRARY} STATIC ${SOURCES})
 set_target_properties(${LIBRARY} PROPERTIES 
-  VERSION ${MINICERNLIB_VERSION} 
-  SOVERSION ${MINICERNLIB_SOVERSION})
+  VERSION ${NANOCERNLIB_VERSION} 
+  SOVERSION ${NANOCERNLIB_SOVERSION})
 
 ################################################################################
 ## Export and Install
