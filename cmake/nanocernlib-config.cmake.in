@@ -28,10 +28,13 @@ if (NOT TARGET nanocernlib_packlib AND
 endif()
 
 # These are IMPORTED targets created by bosIO-targets.cmake
-set(NANOCERNLIB_LIBRARIES
-  nanocernlib_packlib
+# all libraries are mentioned twice to satisfy gcc in the case of
+# cross-dependencies
+set(NANOCERNLIB_LIBRARIES 
+  nanocernlib_packlib 
   nanocernlib_mathlib
   nanocernlib_geant321)
+set(NANOCERNLIB_LIBRARIES ${NANOCERNLIB_LIBRARIES} ${NANOCERNLIB_LIBRARIES})
 
 ## packlib 
 set(NANOCERNLIB_packlib_LIBRARY "@CONF_INCLUDE_DIRS@/nanocernlib_packlib")
