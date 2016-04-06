@@ -25,6 +25,7 @@ set (TARGETS "")
 add_subdirectory(geant321)
 add_subdirectory(packlib)
 add_subdirectory(mathlib)
+add_subdirectory(mclibs)
 add_subdirectory(cfortran)
 
 ################################################################################
