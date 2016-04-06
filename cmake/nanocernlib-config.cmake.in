@@ -33,28 +33,34 @@ endif()
 set(NANOCERNLIB_LIBRARIES 
   nanocernlib_packlib 
   nanocernlib_mathlib
+  nanocernlib_mclibs
   nanocernlib_geant321)
 set(NANOCERNLIB_LIBRARIES ${NANOCERNLIB_LIBRARIES} ${NANOCERNLIB_LIBRARIES})
 
 ## packlib 
 set(NANOCERNLIB_packlib_LIBRARY "@CONF_INCLUDE_DIRS@/nanocernlib_packlib")
-## packlib sub-libraries
 set(NANOCERNLIB_packlib_INCLUDE_DIR "@CONF_INCLUDE_DIRS@/packlib")
-set(NANOCERNLIB_cspack_INCLUDE_DIR "@CONF_INCLUDE_DIRS@/packlib/cspack")
-set(NANOCERNLIB_epio_INCLUDE_DIR "@CONF_INCLUDE_DIRS@/packlib/epio")
-set(NANOCERNLIB_ffread_INCLUDE_DIR "@CONF_INCLUDE_DIRS@/packlib/ffread")
-set(NANOCERNLIB_hbook_INCLUDE_DIR "@CONF_INCLUDE_DIRS@/packlib/hbook")
-set(NANOCERNLIB_zebra_INCLUDE_DIR "@CONF_INCLUDE_DIRS@/packlib/zebra")
-set(NANOCERNLIB_kernlib_INCLUDE_DIR "@CONF_INCLUDE_DIRS@/packlib/kernlib")
-## packlib sub-sub-libraries
-set(NANOCERNLIB_kernbit_INCLUDE_DIR "@CONF_INCLUDE_DIRS@/packlib/kernlib/kernbit")
-set(NANOCERNLIB_kernnum_INCLUDE_DIR "@CONF_INCLUDE_DIRS@/packlib/kernlib/kernnum")
-set(NANOCERNLIB_kerngen_INCLUDE_DIR "@CONF_INCLUDE_DIRS@/packlib/kernlib/kerngen")
-## mathlib includes
+set(NANOCERNLIB_cspack_INCLUDE_DIR "@CONF_INCLUDE_DIRS@/cspack")
+set(NANOCERNLIB_epio_INCLUDE_DIR "@CONF_INCLUDE_DIRS@/epio")
+set(NANOCERNLIB_ffread_INCLUDE_DIR "@CONF_INCLUDE_DIRS@/ffread")
+set(NANOCERNLIB_hbook_INCLUDE_DIR "@CONF_INCLUDE_DIRS@/hbook")
+set(NANOCERNLIB_zebra_INCLUDE_DIR "@CONF_INCLUDE_DIRS@/zebra")
+set(NANOCERNLIB_kernlib_INCLUDE_DIR "@CONF_INCLUDE_DIRS@/kernlib")
+set(NANOCERNLIB_kernbit_INCLUDE_DIR "@CONF_INCLUDE_DIRS@/kernbit")
+set(NANOCERNLIB_kernnum_INCLUDE_DIR "@CONF_INCLUDE_DIRS@/kernnum")
+set(NANOCERNLIB_kerngen_INCLUDE_DIR "@CONF_INCLUDE_DIRS@/kerngen")
+
+## mathlib 
 set(NANOCERNLIB_mathlib_LIBRARY nanocernlib_mathlib)
-set(NANOCERNLIB_gen_INCLUDE_DIR "@CONF_INCLUDE_DIRS@/mathlib/gen")
-## geant321 includes
+set(NANOCERNLIB_gen_INCLUDE_DIR "@CONF_INCLUDE_DIRS@/gen")
+
+## mclibs 
+set(NANOCERNLIB_mclibs_LIBRARY nanocernlib_mclibs)
+set(NANOCERNLIB_pdf_INCLUDE_DIR "@CONF_INCLUDE_DIRS@/pdf")
+
+## geant321 
 set(NANOCERNLIB_geant321_LIBRARY nanocernlib_geant321)
 set(NANOCERNLIB_geant321_INCLUDE_DIR "@CONF_INCLUDE_DIRS@/geant321")
-## cfortran includes
+
+## cfortran 
 set(NANOCERNLIB_cfortran_INCLUDE_DIR "@CONF_INCLUDE_DIRS@/cfortran")
