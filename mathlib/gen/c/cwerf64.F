@@ -6,6 +6,9 @@
 * Mathlib gen
 *
 *
+C SJJ: disabled for now, compiler issue with current version of gfortran
+C in gcc-7
+#if 0 
 #include "gen/pilot.h"
 #if !defined(CERNLIB_DOUBLE)
       FUNCTION CWERF(Z)
@@ -72,3 +75,4 @@ C     GCMPLX(X,Y)=DCMPLX(X,Y)
 #endif
       RETURN
       END
+#endif
