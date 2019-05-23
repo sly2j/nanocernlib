@@ -3,11 +3,11 @@
 ################################################################################
 ## PROJECT: nanocernlib
 ################################################################################
-cmake_minimum_required (VERSION 2.8)
-project (nanocernlib)
-set (NANOCERNLIB_MAJOR_VERSION 1)
-set (NANOCERNLIB_MINOR_VERSION 0)
-set (NANOCERNLIB_PATCH_VERSION 0)
+cmake_minimum_required (VERSION 3.0)
+project (nanocernlib VERSION 1.0.0)
+set (NANOCERNLIB_MAJOR_VERSION ${PROJECT_VERSION_MAJOR})
+set (NANOCERNLIB_MINOR_VERSION ${PROJECT_VERSION_MINOR})
+set (NANOCERNLIB_PATCH_VERSION ${PROJECT_VERSION_PATCH})
 set (NANOCERNLIB_VERSION 
   ${NANOCERNLIB_MAJOR_VERSION}.${NANOCERNLIB_MINOR_VERSION}.${NANOCERNLIB_PATCH_VERSION})
 set (NANOCERNLIB_SOVERSION ${NANOCERNLIB_MAJOR_VERSION})
