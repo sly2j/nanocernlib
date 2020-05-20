@@ -4,7 +4,7 @@
 ## PROJECT: nanocernlib
 ################################################################################
 cmake_minimum_required (VERSION 3.0)
-project (nanocernlib VERSION 1.0.0)
+project (nanocernlib VERSION 1.0.1)
 set (NANOCERNLIB_MAJOR_VERSION ${PROJECT_VERSION_MAJOR})
 set (NANOCERNLIB_MINOR_VERSION ${PROJECT_VERSION_MINOR})
 set (NANOCERNLIB_PATCH_VERSION ${PROJECT_VERSION_PATCH})
@@ -27,6 +27,7 @@ add_subdirectory(packlib)
 add_subdirectory(mathlib)
 add_subdirectory(mclibs)
 add_subdirectory(cfortran)
+
 
 ################################################################################
 ## Prepare the project to be EXPORTed, generate configuration files
