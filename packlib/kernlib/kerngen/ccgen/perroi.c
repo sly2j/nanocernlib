@@ -28,6 +28,7 @@
           TEXT  the text to be printed before the error message
 */
 #include <stdio.h>
+#include <stdlib.h>
 #include "kerngen/fortchar.h"
 #if defined(CERNLIB_QX_SC)
 void type_of_call perroi_(ftext, lgtext)

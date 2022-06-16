@@ -29,6 +29,7 @@
 #include <io.h>
 #endif
 #include <stdio.h>
+#include <unistd.h>
 #include "kerngen/fortchar.h"
 #if defined(CERNLIB_QX_SC)
 void tmproi_(ftext, lgtext)

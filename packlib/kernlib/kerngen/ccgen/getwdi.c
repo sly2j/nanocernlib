@@ -29,6 +29,7 @@
       ISLATE(1) returns its lenth NTEXT
 */
 #include <stdio.h>
+#include <stdlib.h>
 #ifdef WIN32
 #include <direct.h>
 # ifndef getcwd
@@ -58,7 +59,7 @@ void type_of_call getwdi(fname, lgname)
 #endif
       int  *lgname;
 {
-      char *malloc();
+      // char *malloc();
       char *ptalc, *pttext;
       int  fchput();
       int  nalc;

@@ -26,6 +26,9 @@
 */
 #include "kerngen/cf_seek.h"
 #include "kerngen/cf_xaft.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <errno.h>
 #if defined(CERNLIB_QX_SC)
 void type_of_call ciseek_(lundes, jcbyt, stat)
 #endif

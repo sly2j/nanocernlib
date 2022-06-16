@@ -27,6 +27,7 @@
          ISTAT  zero if successful
 */
 #include <stdio.h>
+#include <stdlib.h>
 #include "kerngen/fortchar.h"
 #if defined(CERNLIB_QX_SC)
 int type_of_call renami_(frpath, topath, lgfr, lgto)

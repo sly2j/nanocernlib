@@ -13,6 +13,7 @@
  * 
  */
 #include "kerngen/pilot.h"
+#include <unistd.h>
 #if defined(CERNLIB_WINNT)
 #include "wntgs/intrac.c"
 #elif defined(CERNLIB_QMDOS)

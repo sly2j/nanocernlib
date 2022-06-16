@@ -26,6 +26,7 @@ C ORIG. 24/03/91, RDM + JZ
   Fortran interface routine to lstat
 */
 #include <stdio.h>
+#include <stdlib.h>
 #include <sys/types.h>
 #include <sys/stat.h>
 #include "kerngen/fortchar.h"

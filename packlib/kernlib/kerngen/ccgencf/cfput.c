@@ -33,6 +33,8 @@
       *ISTAT   status, =zero if success
 */
 #include "kerngen/cf_reaw.h"
+#include <stdio.h>
+#include <stdlib.h>
 #include <errno.h>
 #include "kerngen/cf_xaft.h"
 #include "kerngen/wordsizc.h"
