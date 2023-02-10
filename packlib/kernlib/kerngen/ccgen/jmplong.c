@@ -16,6 +16,7 @@
  *
  */
 #include "kerngen/pilot.h"
+#include <setjmp.h>
 
 /*>    ROUTINE JMPLONG
   CERN PROGLIB#         JMPLONG         .VERSION KERNFOR  4.36  930602

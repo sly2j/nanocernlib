@@ -14,6 +14,7 @@
  */
 #include "kerngen/pilot.h"
 #include "kerngen/fortranc.h"
+#include <string.h>
 
 /*>    ROUTINE CTIMEF (CLOCK, STIME)
   CERN PROGLIB# Z265    CTIMEF          .VERSION KERNFOR  4.36  930602

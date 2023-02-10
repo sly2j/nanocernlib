@@ -20,6 +20,6 @@
 */
 void allow_unaligned_data_access_()
 {
-     allow_unaligned_data_access();
+     allow_unaligned_data_access_();
 }
 #endif

@@ -26,6 +26,7 @@ C ORIG. 14/03/91, RDM
   Fortran interface routine to stat
 */
 #include <stdio.h>
+#include <stdlib.h>
 #if defined(CERNLIB_QMVAX)||defined(CERNLIB_QMOS9)
 #include <types.h>
 #include <stat.h>

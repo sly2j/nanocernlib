@@ -28,6 +28,9 @@
 #include "kerngen/cf_xaft.h"
 #include "kerngen/wordsizc.h"
 #include "kerngen/fortranc.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <errno.h>
 
 #if defined(CERNLIB_QX_SC)
 void type_of_call cfseek_(lundes, medium, nwrec, jcrec, stat)

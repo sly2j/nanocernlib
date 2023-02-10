@@ -16,6 +16,7 @@
  *
  */
 #include "kerngen/pilot.h"
+#include <stdlib.h>
 #ifdef CERNLIB_WINNT
 #  include <io.h>
 #endif
@@ -73,7 +74,7 @@ int type_of_call ACCESI(fname,
       if (ptf == NULL)                goto exit;
 
       umode = *mode & 7;
-      istat = access(ptf, umode);
+      istat = accesi_(ptf, umode);
       free(ptf);
 
 exit:

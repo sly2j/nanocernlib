@@ -30,6 +30,7 @@
                 ISLATE(1) returns its length
 */
 #include <stdio.h>
+#include <stdlib.h>
 #include "kerngen/fortchar.h"
 #if defined(CERNLIB_QX_SC)
 void type_of_call geteni_(fname, ftext, lgtext, lgname)

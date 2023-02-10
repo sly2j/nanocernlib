@@ -27,6 +27,7 @@
           NCH   returns the length of the value
 */
 #include <stdio.h>
+#include <stdlib.h>
 #include "kerngen/fortchar.h"
 #if defined(CERNLIB_QX_SC)
 int type_of_call readlni_(fname, ftext, lgtext, lgname)

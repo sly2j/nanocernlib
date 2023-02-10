@@ -14,6 +14,7 @@
  */
 #include "kerngen/pilot.h"
 #include "kerngen/fortranc.h"
+#include <stdlib.h>
 
 /*>    ROUTINE EXITF
   CERN PROGLIB# Z035    EXITF           .VERSION KERNFOR  4.39  940228

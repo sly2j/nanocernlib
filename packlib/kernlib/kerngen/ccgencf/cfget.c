@@ -43,8 +43,11 @@
 #ifndef WIN32
 #  include <errno.h>
 #else
-#  include <stdlib.h>
+#include <stdlib.h>
+#include <errno.h>
 #endif
+#include <errno.h>
+#include <stdio.h>
 #include "kerngen/cf_xaft.h"
 #include "kerngen/wordsizc.h"
 #if defined(CERNLIB_QX_SC)

@@ -14,6 +14,7 @@
  */
 #include "kerngen/pilot.h"
 #include "kerngen/fortranc.h"
+#include <stdlib.h>
 
 /*>    ROUTINE ABEND
   CERN PROGLIB# Z035    ABEND           .VERSION KERNFOR  4.31  911111

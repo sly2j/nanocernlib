@@ -33,7 +33,9 @@
 */
 #include "kerngen/cf_reaw.h"
 #ifndef WIN32
-#  include <errno.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <errno.h>
 #else
 #  include <stdlib.h>
 #endif

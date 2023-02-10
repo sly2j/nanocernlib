@@ -44,6 +44,8 @@
       *ISTAT   status, =zero if success
 */
 #include "kerngen/cf_open.h"
+#include <stdio.h>
+#include <stdlib.h>
 #include <errno.h>
 #include "kerngen/cf_xaft.h"
 #include "kerngen/fortchar.h"
