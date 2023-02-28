@@ -31,10 +31,11 @@ endif()
 # all libraries are mentioned twice to satisfy gcc in the case of
 # cross-dependencies
 set(NANOCERNLIB_LIBRARIES 
-  nanocernlib_packlib 
-  nanocernlib_mathlib
+  nanocernlib_geant321
   nanocernlib_mclibs
-  nanocernlib_geant321)
+  nanocernlib_mathlib
+  nanocernlib_packlib 
+)
 set(NANOCERNLIB_LIBRARIES ${NANOCERNLIB_LIBRARIES} ${NANOCERNLIB_LIBRARIES})
 
 ## packlib 
